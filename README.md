@@ -14,19 +14,19 @@ PS：可以根据自己的想象力去实现新的功能。
 
 English Introduction:
 
-###Positioning
+### Positioning
 
 Ournn Ournn is a deep learning framework based on numpy that I independently developed in my spare time. Ournn aims to provide inspiration for beginners who need to realize the logic of deep learning framework. At the same time, the ultimate goal of ournn is to enable most numpy users to easily carry out deep learning, without having to relearn NEW programming to be familiar with other deep learning frameworks. Ournn is an open source free framework, which is still in the early stage of development, but has begun to take shape. I welcome friends who are interested in this project to join us. The more people there are, the greater the probability of this project being realized. Even though some people may have tried similar work, I believe that personal participation in some low-level and basic projects is of great benefit to their patience, logical thinking and will. At the same time, if we can really make this framework have practical application value, our work will be recognized.
 
 
 
-###Status quo
+### Status quo
 
 At present, ournn has been compatible with the most basic full connection and convolution layer training, with the functions of weight saving, dimension visualization and training effect visualization. However, due to the independent development of this project, there are still many conventional functions and functions that have not been implemented. If there is no special case, the update will continue. The advantage of ournn is that numpy users can modify some underlying parameters according to their own ideas without being bound by rules. For example, if you use tensorflow, you need to use some APIs in tensorflow to access or modify some parameters in tensorflow. Now, the ournn based on numpy can give them more space to operate. At the same time, we hope that this framework has more flexible training and visualization functions to meet all the needs of lazy cancer patients, so the follow-up update function is the top priority; this framework has some limitations. Because this framework is based on Python development, there is no need to consider the memory configuration, but there are disadvantages in thread optimization. At the same time, numpy can't add GPU, so this framework can't speed up through GPU. Later, if you have time, you will try to develop a GPU based data package similar to numpy API.
 
 
 
-###How to use
+### How to use
 
 Step 1: download the ournn package. And put it in the compiler's path.
 
