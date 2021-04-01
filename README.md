@@ -47,8 +47,6 @@
 第二步，克隆Ournn,如果下载遇到问题，请换源或者在clone后方添加镜像。
     
     git clone https://github.com/stevezhangz/ournn.git
-    # 修改包的名称
-    mv ournn-main ournn
 
 第三步，安装numpy
 
