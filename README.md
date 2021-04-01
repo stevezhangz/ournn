@@ -47,6 +47,8 @@
 第二步，克隆Ournn,如果下载遇到问题，请换源或者在clone后方添加镜像。
     
     git clone https://github.com/stevezhangz/ournn.git
+    # 修改包的名称
+    mv ournn-main ournn
 
 第三步，安装numpy
 
@@ -58,7 +60,7 @@
     
  最后，验证框架是否可用,注意这里我为了方便使用了tensorflow中的一个数据集，各位如果没有tensorflow，可以将该数据集换成相同size的随机数。
  
-    ipython3 ournn-main/test.py
+    ipython3 ournn/test.py
 
 ### 2.搭建模型的示例
 首先给出完整的流程：
