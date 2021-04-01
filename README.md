@@ -41,29 +41,27 @@
 ### 1.安装
 第一步，找到你编译器的环境路径path，打开Linux终端后
 
-    """
+
     cd path
-    """
+
     
 第二步，克隆Ournn,如果下载遇到问题，请换源或者在clone后方添加镜像。
     
-    """
+
     git clone https://github.com/stevezhangz/ournn.git
-    """
-    
+
 第三步，安装numpy
 
-   """
+
    sudo apt-get install pip3
    sudo apt-get install ipython3
    pip3 install numpy
-   """
+
     
  最后，验证框架是否可用,注意这里我为了方便使用了tensorflow中的一个数据集，各位如果没有tensorflow，可以将该数据集换成相同size的随机数。
  
-    ““”
     ipython3 ournn-main/test.py
-    """
+
 ### 2.搭建模型的示例
 首先给出完整的流程：
 
@@ -163,7 +161,7 @@
 在使用中有任何问题，欢迎反馈给我，可以用以下联系方式跟我交流
 
 * 邮件(stevezhangz#163.com, 把#换成@)
-* 微信:jserme
+* 微信:
 
 
 
