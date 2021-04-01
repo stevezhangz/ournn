@@ -8,7 +8,7 @@ class skeleton:
         self.container = []
         self.name = name
         self.lambda_=Regularization
-    def add_layers(self, functions):
+    def add(self, functions):
         try:
             assert len(functions) >= 1
             count = 0
