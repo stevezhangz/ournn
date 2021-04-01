@@ -29,8 +29,8 @@
 
 文件夹|介绍|
 :---:|:---|
-"Layer"|"Layer"中包含两个文件夹,"activations.py"与"layers.py".
-       | "layers.py"中有深度学习中常用的层比如全连接、卷积层。
+"Layer"|"Layer"中包含两个文件夹,"activations.py"与"layers.py".|
+       | "layers.py"中有深度学习中常用的层比如全连接、卷积层。       |
        | “activations.py"中包含着常用的激活函数比如“relu”。       |
 “tools”|“matrix_tools.py”是一些涉及到矩阵操作的工具，比如矩阵的广播、
        |矩阵的点乘、zero_padding 等等。                       
