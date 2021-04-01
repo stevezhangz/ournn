@@ -29,22 +29,9 @@
 
 文件夹|介绍|
 :---:|:---|
-"Layer"|"Layer"中包含两个文件夹,"activations.py"与"layers.py". "layers.py"中有深度学习中常用的层比如全连接、卷积层。 “activations.py"中包含着常用的激活函数比如“relu”。       |
-“tools”|“matrix_tools.py”是一些涉及到矩阵操作的工具，比如矩阵的广播、
-       |矩阵的点乘、zero_padding 等等。                       
-       |“pre_process.py”涉及到一些数据的预处理，比如热编码或者训练数据
-       |、测试数据集分割，等等。
-       |“visualization.py”则负责训练过程中或者训练后的可视化等等  |
-“frame.py”|这是框架的骨架，实例化该类可以实现后续的训练过程。       |
-        | "add_layers":该方法可以将layer封装到模型中,参数可以选择
-        | 实例化的某个神经网络层抑或一个含有神经网络层的list。
-        | “train”：模型训练
-        | “backward”：反向传播
-        | “predict”：向前传播
-        | “save_weights”:保存权重
-        | “load_weights”:加载权重
-        | “show_info": 加载模型参数以及维度信息
-        | ”visualization“：训练可视化                         |
+"Layer"|"Layer"中包含两个文件夹,"activations.py"与"layers.py". "layers.py"中有深度学习中常用的层比如全连接、卷积层。 “activations.py"中包含着常用的激活函数比如“relu”|
+“tools”|“matrix_tools.py”是一些涉及到矩阵操作的工具，比如矩阵的广播、矩阵的点乘、zero_padding 等等；“pre_process.py”涉及到一些数据的预处理，比如热编码或者训练数据、测试数据集分割，等等；“visualization.py”则负责训练过程中或者训练后的可视化等等  |
+“frame.py”|这是框架的骨架，实例化该类可以实现后续的训练过程。 "add_layers":该方法可以将layer封装到模型中,参数可以选择实例化的某个神经网络层抑或一个含有神经网络层的list； “train”：模型训练 “backward”：反向传播； “predict”：向前传播；“save_weights”:保存权重； “load_weights”:加载权重； “show_info": 加载模型参数以及维度信息；”visualization“：训练可视化 |
 ”losses.py“|常用的损失函数|
 ”optimizers.py“|优化器|
 
