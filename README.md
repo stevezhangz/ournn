@@ -52,10 +52,9 @@
 
 第三步，安装numpy
 
-
-   sudo apt-get install pip3
-   sudo apt-get install ipython3
-   pip3 install numpy
+    sudo apt-get install pip3
+    sudo apt-get install ipython3
+    pip3 install numpy
 
     
  最后，验证框架是否可用,注意这里我为了方便使用了tensorflow中的一个数据集，各位如果没有tensorflow，可以将该数据集换成相同size的随机数。
