@@ -42,13 +42,10 @@
 ### 1.安装
 第一步，找到你编译器的环境路径path，打开Linux终端后
 
-
     cd path
 
-    
 第二步，克隆Ournn,如果下载遇到问题，请换源或者在clone后方添加镜像。
     
-
     git clone https://github.com/stevezhangz/ournn.git
 
 第三步，安装numpy
@@ -66,7 +63,7 @@
 ### 2.搭建模型的示例
 首先给出完整的流程：
 
-    “”“
+
     import numpy as np
     from tensorflow.keras.datasets import mnist
     from ournn.tools.preprocess import sparse_one_hot_encode
@@ -104,11 +101,11 @@
     sk.show_info()
     #将损失以及精度绘图
     sk.visualization()
-    “”“
+
     
 模型之间可以相互拼接，如下所示：
     
-    ”“”
+
     #初始化框架
     sk1=skeleton(name="Model1",Regularization=None)
     sk2=skeleton(name="Model2",Regularization=None)
@@ -125,11 +122,11 @@
         ]
     )
     sk1+sk2 #将sk2拼接到sk1中
-    “”“
+
     
  同时也可逐层向模型中添加神经网络层。
  
-      ”“”
+
      sk=skeleton(name="Model1",Regularization=None)
      conv1=Conv2d(kernal_size=(5,5),padding=True,stride=2,channel_in=1,channel_o=3)
      flat=Flatten()
@@ -141,11 +138,11 @@
      sk.add_layers(fc)
      sk.add_layers(fc2)
      sk.add_layers(fc3)
-     “”“
+
 
 当然，如果想要自由的去搭建网络，也可以调用函数后自由搭配：
 
-      ”“”
+
      conv1=Conv2d(kernal_size=(5,5),padding=True,stride=2,channel_in=1,channel_o=3)
      flat=Flatten()
      fc=Fully_connected( output_dim=500,act="relu")
@@ -154,7 +151,7 @@
      layers=[ conv1,flat,fc,fc2,fc3]
      layers_bac=layers[::-1]
      SGD.optimizer(x, y layers, layers_bac, epoches=100,loss=sparse_softmax_cross_entropy(),sample_size=0.7,lr=1e-5)
-    ”“”
+
  后续有更简洁的方法会更新
     
  ------------------------------------------------------------------------
