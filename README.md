@@ -201,19 +201,4 @@
  
  
  ------------------------------------------------------------------------
-## 感激
-感谢以下
 
-* [numpy](https://numpy.org/)
-* [matplotlib](https://matplotlib.org/)
-
-
-------------------------------------------------------------------------
-## 关于本人
-
-```
- {
-  Name  : "steve",
-  state: Do research and preparing to apply for PhD of AI. Except for the above,  I'm single now, hhh.
-}
-```
