@@ -1,5 +1,5 @@
 # Ournn:一种为numpy定制的，训练、可视化一体的深度学习框架
-![avatar](ournn.jpg)
+![ournn](ournn.jpg)
 ## 关于Ournn：
 1. Ournn 是为numpy量身定制的类深度学习框架，致力实现numpy格式的数据进行深度学习，其主要的目标如下:    
     * 可训练
