@@ -25,6 +25,7 @@ class skeleton:
     def __add__(self, other_model):
         for layer in other_model.container:
             self.container.append(layer)
+        self.bac_container = self.container[::-1]
     def train(self, x, y,
               lr=None,
               early_stop=10,
