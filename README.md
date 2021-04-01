@@ -23,6 +23,7 @@
     * 补充、完善目前深度学习所需要的各类函数。
     
 ------------------------------------------------------------------------
+
 ## 文件说明：
 
 
@@ -31,30 +32,42 @@
 "Layer"|"Layer"中包含两个文件夹,"activations.py"与"layers.py". "layers.py"中有深度学习中常用的层比如全连接、卷积层。 “activations.py"中包含着常用的激活函数比如“relu”|
 “tools”|“matrix_tools.py”是一些涉及到矩阵操作的工具，比如矩阵的广播、矩阵的点乘、zero_padding 等等；“pre_process.py”涉及到一些数据的预处理，比如热编码或者训练数据、测试数据集分割，等等；“visualization.py”则负责训练过程中或者训练后的可视化等等  |
 “frame.py”|这是框架的骨架，实例化该类可以实现后续的训练过程。 "add_layers":该方法可以将layer封装到模型中,参数可以选择实例化的某个神经网络层抑或一个含有神经网络层的list； “train”：模型训练 “backward”：反向传播； “predict”：向前传播；“save_weights”:保存权重； “load_weights”:加载权重； “show_info": 加载模型参数以及维度信息；”visualization“：训练可视化 |
-”losses.py“|常用的损失函数|
-”optimizers.py“|优化器|
-
-
+”losses.py“|常用的损失函数，目前包含交叉熵以及MSE|
+”optimizers.py“|优化器，目前只有SGD|
 
 ------------------------------------------------------------------------
+
 ## 使用方法
 ### 1.安装
+第一步，找到你编译器的环境路径path，打开Linux终端后
+
     """
-    # 第一步，找到你编译器的环境路径path，打开Linux终端后
     cd path
-    # 第二步，克隆Ournn
-    # 如果下载遇到问题，请换源或者在clone后方添加镜像。
+    """
+    
+第二步，克隆Ournn,如果下载遇到问题，请换源或者在clone后方添加镜像。
+    
+    """
     git clone https://github.com/stevezhangz/ournn.git
-    # 第三步，安装numpy
-    sudo apt-get install pip3
-    sudo apt-get install ipython3
-    pip3 install numpy
-    # 验证框架是否可用,注意这里我为了方便使用了tensorflow中的一个数据集，各位如果没有tensorflow，可以将该数据集换成相同size的随机数。
+    """
+    
+第三步，安装numpy
+
+   """
+   sudo apt-get install pip3
+   sudo apt-get install ipython3
+   pip3 install numpy
+   """
+    
+ 最后，验证框架是否可用,注意这里我为了方便使用了tensorflow中的一个数据集，各位如果没有tensorflow，可以将该数据集换成相同size的随机数。
+ 
+    ““”
     ipython3 ournn-main/test.py
     """
-### 2.搭建模型的几种流程
+### 2.搭建模型的示例
+首先给出完整的流程：
+
     “”“
-    # 第一种
     import numpy as np
     from tensorflow.keras.datasets import mnist
     from ournn.tools.preprocess import sparse_one_hot_encode
@@ -92,9 +105,11 @@
     sk.show_info()
     #将损失以及精度绘图
     sk.visualization()
+    “”“
     
+模型之间可以相互拼接，如下所示：
     
-    # 第二种
+    ”“”
     #初始化框架
     sk1=skeleton(name="Model1",Regularization=None)
     sk2=skeleton(name="Model2",Regularization=None)
@@ -110,9 +125,12 @@
         Fully_connected(output_dim=10,act="relu")
         ]
     )
-    sk1+sk2 #后续使用sk1进行训练
+    sk1+sk2 #将sk2拼接到sk1中
+    “”“
     
-    # 第三种
+ 同时也可逐层向模型中添加神经网络层。
+ 
+      ”“”
      sk=skeleton(name="Model1",Regularization=None)
      conv1=Conv2d(kernal_size=(5,5),padding=True,stride=2,channel_in=1,channel_o=3)
      flat=Flatten()
@@ -124,8 +142,11 @@
      sk.add_layers(fc)
      sk.add_layers(fc2)
      sk.add_layers(fc3)
-     
-    # 第四种
+     “”“
+
+当然，如果想要自由的去搭建网络，也可以调用函数后自由搭配：
+
+      ”“”
      conv1=Conv2d(kernal_size=(5,5),padding=True,stride=2,channel_in=1,channel_o=3)
      flat=Flatten()
      fc=Fully_connected( output_dim=500,act="relu")
@@ -134,17 +155,15 @@
      layers=[ conv1,flat,fc,fc2,fc3]
      layers_bac=layers[::-1]
      SGD.optimizer(x, y layers, layers_bac, epoches=100,loss=sparse_softmax_cross_entropy(),sample_size=0.7,lr=1e-5)
-     
-     # 后续有更简洁的方法会更新
     ”“”
-    
+ 后续有更简洁的方法会更新
     
  ------------------------------------------------------------------------
 ## 有问题反馈
 在使用中有任何问题，欢迎反馈给我，可以用以下联系方式跟我交流
 
 * 邮件(stevezhangz#163.com, 把#换成@)
-* 微信:
+* 微信:jserme
 
 
 
