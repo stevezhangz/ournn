@@ -44,7 +44,7 @@
 
     cd path
 
-第二步，克隆Ournn,如果下载遇到问题，请换源或者在clone后方添加镜像。
+第二步，克隆Ournn,如果下载遇到问题，请换源或者在url后方添加镜像。
     
     git clone https://github.com/stevezhangz/ournn.git
 
