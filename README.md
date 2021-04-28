@@ -1,68 +1,71 @@
-# Ournn:一种为numpy定制的，训练、可视化一体的深度学习框架
+# Ournn:A deep learning framework customized for numpy that integrates training and visualization 
 ![ournn](ournn.jpg)
-## 关于Ournn：
-1. Ournn 是为numpy量身定制的类深度学习框架，致力实现numpy格式的数据进行深度学习，其主要的目标如下:    
-    * 可训练
-      * 能够进行最基本的深度学习训练是该框架最基本的目标。
-    * 性能达标
-      * 我们将从个角度进行提升：1.开发GPU版本的numpy数据包。2.对框架中计算复杂度比较高的部分进行改动，同时努力将硬件因素考虑到框架设计过程中。 
-    * 可视化
-      * 可视化是深度学习研究中必不可少的环节，我们致力于将部分重要的可视化环节封装到框架中，从而让用户避开收集数据、自行可视化的繁琐流程。
-    * 简洁简洁再简洁
-      * 我们希望简单化搭建神经网络的过程，从而让人们不需要有太多框架使用经验就可快速上手，这是本项目的最终目标。
+## About Ournn：
+1. Ournn is a deep learning framework tailored for numpy. It is committed to achieving deep learning with data in numpy format. Its main goals are as follows :    
+* Trainable
+      * Being able to carry out the most basic deep learning training is the most basic goal of the framework.
+    * Performance up to standard
+      * We will improve from several perspectives: 1. Develop the GPU version of the numpy data package. 2. Make changes to the more computationally complex parts of the framework, and at the same time strive to take the hardware factors into account in the framework design process.
+    * Visualization
+      * Visualization is an indispensable link in deep learning research. We are committed to encapsulating some important visualization links into the framework so that users can avoid the cumbersome process of collecting data and visualizing themselves.
+    * Concise and concise
+      * We hope to simplify the process of building neural networks so that people can get started quickly without much experience in using the framework. This is the ultimate goal of this project.
 
 
-2. 为了实现以上目标，我们付出了一定精力，且目前已经有了些许进展：
-    * 常用函数
-      * 我们已经在框架中封装了最基本的一些函数：1. 神经网络方面 全连接层、卷积层以及个别的的激活函数和损失函数。
-    * 搭建网络
-      * 由于我们是该领域从事基础研究的学生，故有其他框架的使用经验。通过参考其他人的框架，以及结合个人的懒癌精神，设计了心目中比较方便的网络搭建方法，在下文中有详细地介绍。
+2. In order to achieve the above goals, we have paid a certain amount of energy, and we have made some progress so far:
+    * Common functions
+      * We have encapsulated some of the most basic functions in the framework: 1. Neural network fully connected layer, convolutional layer and individual activation function and loss function.
+    * Build a network
+      * Since we are students engaged in basic research in this field, we have experience in using other frameworks. By referring to other people's frameworks and combining the individual's lazy spirit, I have designed a more convenient network construction method in my mind, which is described in detail below.
 
 
-3. 我们也清晰地认识到，该项目距离最终目标还有一段距离，所以接下来我们的重心在于：
-    * 进一步优化整体的设计思路。
-    * 补充、完善目前深度学习所需要的各类函数。
+3. We also clearly recognize that the project is still some distance away from the ultimate goal, so our next focus is on:
+    * Further optimize the overall design ideas.
+    * Supplement and perfect the various functions needed for deep learning at present. 
     
 ------------------------------------------------------------------------
 
-## 文件说明：
+## Wénjiàn shuōmíng: Wénjiàn jiā |jièshào | :---:|:---| "Layer"|"Layer"zhōng bāohán liǎng gè wénjiàn jiā,"activations.Py"yǔ"layers.Py". "Layers.Py"zhōng yǒu shēndù xuéxí zhōng chángyòng de céng bǐrú quán liánjiē, juàn jī céng. “Activations.Py"zhōng bāohánzhe chángyòng de jīhuó hánshù bǐrú “relu”| “tools”|“matrix_tools.Py” shì yīxiē shèjí dào jǔzhèn cāozuò de gōngjù, bǐrú jǔzhèn de guǎngbò, jǔzhèn de diǎn chéng,zero_padding děng děng;“pre_process.Py” shèjí dào yīxiē shùjù de yù chǔlǐ, bǐrú rè biānmǎ huòzhě xùnliàn shùjù, cèshì shùjù jí fēngē, děng děng;“visualization.Py” zé fùzé xùnliàn guòchéng zhōng huòzhě xùnliàn hòu de kěshìhuà děng děng | “frame.Py”|zhè shì kuàngjià de gǔjià, shílì huà gāi lèi kěyǐ shíxiàn hòuxù de xùnliàn guòchéng. "Add": Gāi fāngfǎ kěyǐ jiāng layer fēngzhuāng dào móxíng zhōng, cānshù kěyǐ xuǎnzé shílì huà de mǒu gè shénjīng wǎngluò céng yìhuò yīgè hányǒu shénjīng wǎngluò céng de list; “train”: Móxíng xùnliàn “backward”: Fǎn xiàng chuánbò; “predict”: Xiàng qián chuánbò;“save_weights”: Bǎocún quánzhòng; “load_weights”: Jiāzài quánzhòng; “show_info": Jiāzài móxíng cānshù yǐjí wéidù xìnxī;”visualization“: Xùnliàn kěshìhuà | ”losses.Py“|chángyòng de sǔnshī hánshù, mùqián bāohán jiāochā shāng yǐjí MSE| ”optimizers.Py“|yōuhuà qì, mùqián zhǐyǒu SGD| ------------------------------------------------------------------------ ## shǐyòng fāngfǎ ### 1. Ānzhuāng dì yī bù, zhǎodào nǐ biānyì qì de huánjìng lùjìng path, dǎkāi Linux zhōngduān hòu cd path dì èr bù, kèlóng Ournn, rúguǒ xiàzài yù dào wèntí, qǐng huàn yuán huòzhě zài clone hòufāng tiānjiā jìngxiàng. Git clone https://Github.Com/stevezhangz/ournn.Git # xiūgǎi bāo de míngchēng mv ournn-main ournn dì sān bù, ānzhuāng numpy sudo apt-get install pip3 sudo apt-get install ipython3 pip3 install numpy zuìhòu, yànzhèng kuàngjià shìfǒu kěyòng, zhùyì zhèlǐ wǒ wèile fāngbiàn shǐyòngle tensorflow zhōng de yīgè shùjù jí, gèwèi rúguǒ méiyǒu tensorflow, kěyǐ jiāng gāi shùjù jí huàn chéng xiāngtóng size de suíjī shù. Ipython3 ournn/test.Py
+展开
+1103 / 5000
+翻译结果
+## File description:
 
 
-文件夹|介绍|
+Folder|Introduction|
 :---:|:---|
-"Layer"|"Layer"中包含两个文件夹,"activations.py"与"layers.py". "layers.py"中有深度学习中常用的层比如全连接、卷积层。 “activations.py"中包含着常用的激活函数比如“relu”|
-“tools”|“matrix_tools.py”是一些涉及到矩阵操作的工具，比如矩阵的广播、矩阵的点乘、zero_padding 等等；“pre_process.py”涉及到一些数据的预处理，比如热编码或者训练数据、测试数据集分割，等等；“visualization.py”则负责训练过程中或者训练后的可视化等等  |
-“frame.py”|这是框架的骨架，实例化该类可以实现后续的训练过程。 "add":该方法可以将layer封装到模型中,参数可以选择实例化的某个神经网络层抑或一个含有神经网络层的list； “train”：模型训练 “backward”：反向传播； “predict”：向前传播；“save_weights”:保存权重； “load_weights”:加载权重； “show_info": 加载模型参数以及维度信息；”visualization“：训练可视化 |
-”losses.py“|常用的损失函数，目前包含交叉熵以及MSE|
-”optimizers.py“|优化器，目前只有SGD|
+"Layer"|"Layer" contains two folders, "activations.py" and "layers.py". "layers.py" contains layers commonly used in deep learning such as fully connected and convolutional layers. "Activations.py" contains commonly used activation functions such as "relu"|
+"Tools"|"matrix_tools.py" are tools related to matrix operations, such as matrix broadcasting, matrix dot multiplication, zero_padding, etc.; "pre_process.py" involves some data preprocessing, such as hot encoding or training Data, test data set segmentation, etc.; "visualization.py" is responsible for visualization during or after training, etc. |
+"Frame.py"|This is the skeleton of the frame, instantiating this class can realize the subsequent training process. "add": This method can encapsulate the layer into the model, and the parameters can be selected to instantiate a neural network layer or a list containing neural network layers; "train": model training "backward": back propagation; "predict ": forward propagation; "save_weights": save weights; "load_weights": load weights; "show_info": load model parameters and dimensional information; "visualization": training visualization |
+"Losses.py"|Commonly used loss functions, currently including cross entropy and MSE|
+"Optimizers.py"|Optimizer, currently only SGD|
 
-------------------------------------------------------------------------
+-------------------------------------------------- ----------------------
 
-## 使用方法
-### 1.安装
-第一步，找到你编译器的环境路径path，打开Linux终端后
+## Instructions
+### 1. Installation
+The first step is to find the environment path path of your compiler, after opening the Linux terminal
 
     cd path
 
-第二步，克隆Ournn,如果下载遇到问题，请换源或者在clone后方添加镜像。
+The second step is to clone Ournn. If you encounter problems with the download, please change the source or add a mirror behind the clone.
     
     git clone https://github.com/stevezhangz/ournn.git
-    # 修改包的名称
+    # Modify the name of the package
     mv ournn-main ournn
 
-第三步，安装numpy
+The third step is to install numpy
 
     sudo apt-get install pip3
     sudo apt-get install ipython3
     pip3 install numpy
 
     
- 最后，验证框架是否可用,注意这里我为了方便使用了tensorflow中的一个数据集，各位如果没有tensorflow，可以将该数据集换成相同size的随机数。
+ Finally, verify that the framework is available. Note that I used a data set in tensorflow for convenience. If you don’t have tensorflow, you can replace the data set with random numbers of the same size.
  
-    ipython3 ournn/test.py
-
-### 2.搭建模型的示例
-首先给出完整的流程：
+    ipython3 ournn/test.py 
+### 2. Example of building a model
+First give the complete process:
 
 
     import numpy as np
@@ -74,17 +77,17 @@
     from ournn.optimizers import *
     from ournn.losses import *
 
-    #加载mnist数据集
+    #Load mnist data set
     (x,y),(t,d)=mnist.load_data()
     x=np.expand_dims(x,axis=-1)
     y=y.reshape(-1,1)
     x,y=x[0:400],y[0:400]
     x=(x-x.max())/(x.max()-x.min())
-    #热编码
+    #Hot coding
     y=sparse_one_hot_encode(y)
-    #初始化框架
+    #Initialization framework
     sk=skeleton(name="Model1",Regularization=None)
-    #将不同的层添加到框架中
+    #Add different layers to the frame
     sk.add(
         [
         Conv2d(kernal_size=(5,5),padding=True,stride=2,channel_in=1,channel_o=3),
@@ -94,23 +97,23 @@
         Fully_connected(output_dim=10,act="relu")
         ]
     )
-    #优化器
+    #Optimizer
     optimizer=SGD(loss=sparse_softmax_cross_entropy(),sample_size=0.7,lr=1e-5)
-    #训练
+    #training
     history=sk.train(x,y,epoches=20,train_test_split=0.7,optimizer=optimizer)
-    #显示维度信息
+    #Display dimension information
     sk.show_info()
-    #将损失以及精度绘图
+    #Draw loss and precision
     sk.visualization()
 
     
-模型之间可以相互拼接，如下所示：
+Models can be spliced ​​with each other, as shown below:
     
 
-    #初始化框架
+    #Initialization framework
     sk1=skeleton(name="Model1",Regularization=None)
     sk2=skeleton(name="Model2",Regularization=None)
-    #将不同的层添加到框架中
+    #Add different layers to the frame
     sk1.add(
         [
         Conv2d(kernal_size=(5,5),padding=True,stride=2,channel_in=1,channel_o=3),
@@ -122,10 +125,10 @@
         Fully_connected(output_dim=10,act="relu")
         ]
     )
-    sk1+sk2 #将sk2拼接到sk1中
+    sk1+sk2 #splicing sk2 into sk1
 
     
- 同时也可逐层向模型中添加神经网络层。
+ At the same time, neural network layers can be added to the model layer by layer.
  
 
      sk=skeleton(name="Model1",Regularization=None)
@@ -141,7 +144,7 @@
      sk.add(fc3)
 
 
-当然，如果想要自由的去搭建网络，也可以调用函数后自由搭配：
+Of course, if you want to build a network freely, you can also freely match after calling the function: 
 
 
      conv1=Conv2d(kernal_size=(5,5),padding=True,stride=2,channel_in=1,channel_o=3)
@@ -153,37 +156,36 @@
      layers_bac=layers[::-1]
      SGD.optimizer(x, y layers, layers_bac, epoches=100,loss=sparse_softmax_cross_entropy(),sample_size=0.7,lr=1e-5)
 
- 后续有更简洁的方法会更新
+ A more concise method will be updated in the future
     
- ------------------------------------------------------------------------
-## 有问题反馈
-在使用中有任何问题，欢迎反馈给我，可以用以下联系方式跟我交流
+  -------------------------------------------------- ----------------------
+## Feedback
+If you have any questions in use, please feel free to give me feedback. You can use the following contact information to communicate with me
 
-* 邮件(stevezhangz#163.com, 把#换成@)
-* 微信:
-
-
+* Mail (stevezhangz#163.com, replace # with @)
+* WeChat:
 
 
-------------------------------------------------------------------------
-## 捐助开发者    
-* 在兴趣的驱动下,写一个`免费`的东西。    
-* 但是如果您想资助作者，作者也会欣然接受，哈哈哈哈。    
+
+
+-------------------------------------------------- ----------------------
+## Donate to the developer
+* Driven by interest, write a `free` thing.
+* But if you want to fund the author, the author will gladly accept it, hahahaha.
     
     
  
  
- ------------------------------------------------------------------------
-## 感激
-感谢以下
+  -------------------------------------------------- ----------------------
+## Thankful
+Thanks for the following
 
 * [numpy](https://numpy.org/)
 * [matplotlib](https://matplotlib.org/)
 
 
-------------------------------------------------------------------------
-## 关于本人
-
+-------------------------------------------------- ----------------------
+## About me 
 ```
  {
   Name  : "steve",
