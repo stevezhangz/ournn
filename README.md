@@ -25,12 +25,6 @@
     
 ------------------------------------------------------------------------
 
-## Wénjiàn shuōmíng: Wénjiàn jiā |jièshào | :---:|:---| "Layer"|"Layer"zhōng bāohán liǎng gè wénjiàn jiā,"activations.Py"yǔ"layers.Py". "Layers.Py"zhōng yǒu shēndù xuéxí zhōng chángyòng de céng bǐrú quán liánjiē, juàn jī céng. “Activations.Py"zhōng bāohánzhe chángyòng de jīhuó hánshù bǐrú “relu”| “tools”|“matrix_tools.Py” shì yīxiē shèjí dào jǔzhèn cāozuò de gōngjù, bǐrú jǔzhèn de guǎngbò, jǔzhèn de diǎn chéng,zero_padding děng děng;“pre_process.Py” shèjí dào yīxiē shùjù de yù chǔlǐ, bǐrú rè biānmǎ huòzhě xùnliàn shùjù, cèshì shùjù jí fēngē, děng děng;“visualization.Py” zé fùzé xùnliàn guòchéng zhōng huòzhě xùnliàn hòu de kěshìhuà děng děng | “frame.Py”|zhè shì kuàngjià de gǔjià, shílì huà gāi lèi kěyǐ shíxiàn hòuxù de xùnliàn guòchéng. "Add": Gāi fāngfǎ kěyǐ jiāng layer fēngzhuāng dào móxíng zhōng, cānshù kěyǐ xuǎnzé shílì huà de mǒu gè shénjīng wǎngluò céng yìhuò yīgè hányǒu shénjīng wǎngluò céng de list; “train”: Móxíng xùnliàn “backward”: Fǎn xiàng chuánbò; “predict”: Xiàng qián chuánbò;“save_weights”: Bǎocún quánzhòng; “load_weights”: Jiāzài quánzhòng; “show_info": Jiāzài móxíng cānshù yǐjí wéidù xìnxī;”visualization“: Xùnliàn kěshìhuà | ”losses.Py“|chángyòng de sǔnshī hánshù, mùqián bāohán jiāochā shāng yǐjí MSE| ”optimizers.Py“|yōuhuà qì, mùqián zhǐyǒu SGD| ------------------------------------------------------------------------ ## shǐyòng fāngfǎ ### 1. Ānzhuāng dì yī bù, zhǎodào nǐ biānyì qì de huánjìng lùjìng path, dǎkāi Linux zhōngduān hòu cd path dì èr bù, kèlóng Ournn, rúguǒ xiàzài yù dào wèntí, qǐng huàn yuán huòzhě zài clone hòufāng tiānjiā jìngxiàng. Git clone https://Github.Com/stevezhangz/ournn.Git # xiūgǎi bāo de míngchēng mv ournn-main ournn dì sān bù, ānzhuāng numpy sudo apt-get install pip3 sudo apt-get install ipython3 pip3 install numpy zuìhòu, yànzhèng kuàngjià shìfǒu kěyòng, zhùyì zhèlǐ wǒ wèile fāngbiàn shǐyòngle tensorflow zhōng de yīgè shùjù jí, gèwèi rúguǒ méiyǒu tensorflow, kěyǐ jiāng gāi shùjù jí huàn chéng xiāngtóng size de suíjī shù. Ipython3 ournn/test.Py
-展开
-1103 / 5000
-翻译结果
-## File description:
-
 
 Folder|Introduction|
 :---:|:---|
